@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<colleges>
+	<partcipant>
+		<idd>101</idd>
+		<name>MIT</name>
+	</partcipant>
+	<partcipant>
+		<idd>102</idd>
+		<name>VIT</name>
+	</partcipant>
+	<partcipant>
+		<idd>103</idd>
+		<name>SIT</name>
+	</partcipant>
+</colleges>
