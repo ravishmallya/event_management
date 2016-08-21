@@ -8,9 +8,21 @@ function keyEntered(e)
 	{
 		var clg_name=fetchName(tval);
 		if(clg_name!="")
+		{
+			document.getElementById("s_id").style.display = "none";
 			document.getElementById("username").value=clg_name;
+			document.getElementById("password").disabled=false;
+			document.getElementById("reg_button").disabled=false;
+		}
 		else
-			alert('invalid id');
+		{
+			document.getElementById("username").value="";
+			document.getElementById("s_id").style.display = "inline";
+			document.getElementById("s_id").innerHTML="invalid id";
+			document.getElementById("password").innerHTML="";
+			document.getElementById("password").disabled=true;	
+			document.getElementById("reg_button").disabled=true;
+		}
 	}
 }
 function fetchName(clg)
