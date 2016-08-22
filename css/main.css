@@ -8,13 +8,16 @@
 #s_id{
     .display: none;
 }
+#access_c{
+    .display: none;
+}
 body, html{
      height: 100%;
  	background-repeat: no-repeat;
  	background-color: #d3d3d3;
+    background:'images/leaves.jpg';
  	font-family: 'Oxygen', sans-serif;
 }
-
 .main{
  	margin-top: 70px;
 }

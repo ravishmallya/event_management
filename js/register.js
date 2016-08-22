@@ -12,7 +12,7 @@ function keyEntered(e)
 			document.getElementById("s_id").style.display = "none";
 			document.getElementById("username").value=clg_name;
 			document.getElementById("password").disabled=false;
-			document.getElementById("reg_button").disabled=false;
+			document.getElementById("reg_button").disabled=true;
 		}
 		else
 		{
@@ -24,6 +24,32 @@ function keyEntered(e)
 			document.getElementById("reg_button").disabled=true;
 		}
 	}
+}
+function access_check()
+{
+	var acc=document.getElementById("password").value;
+	var c_id=document.getElementById("name").value;
+	document.getElementById("reg_button").disabled=true;
+	if(acc.length==5)
+	{
+			var ajaxurl = 'http://localhost/project/check_access.php';
+        	data =  {'c_id':c_id,'c_pass':acc};
+        	$.post(ajaxurl,data,function(response){
+        		if(response=='failure')
+        		{
+        			document.getElementById('access_c').style.display="inline";
+        			document.getElementById('access_c').style.innerHTML="invalid code";
+        		}
+        		else if(response=='success')
+        		{
+        			document.getElementById("reg_button").disabled=false;
+        			document.getElementById('access_c').style.display="none";	
+        		}
+        	});
+	}
+	else
+		document.getElementById("reg_button").disabled=true;
+
 }
 function fetchName(clg)
 {

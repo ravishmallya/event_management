@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head> 
+    <head>  
     	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -9,17 +9,18 @@
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 
 		<!-- Website Font style -->
-	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	    <link rel="stylesheet" href="css/awsome_min.css">
 		
 		<!-- Google Fonts -->
-		<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+		<link href='css/font1.ss' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 		<title>registration</title>
 		<script src="jquery-3.1.0.js" type="text/javascript"></script>
-		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/boot.js"></script>
 		<script type="text/javascript" src="js/register.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	</head>
-	<body>
+	<body background="images/chess.jpg">
 		<div class="container">
 			<div class="row main">
 				<div class="panel-heading">
@@ -29,14 +30,13 @@
 	               	</div>
 	            </div> 
 				<div class="main-login main-center">
-					<form class="form-horizontal" method="post" action="#">
-						
+					<form class="form-horizontal" method="post" action="http://localhost/project/tab_snippet.php">
 						<div class="form-group">
 							<label for="name" class="cols-sm-2 control-label">College Id</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<input type="text" type="number" class="form-control" name="name" id="name"  placeholder="Enter your College Id" tabindex=0 onkeyup="keyEntered()" maxlength="3" />
+									<input type="text" type="number" class="form-control" name="name" id="name"  placeholder="Enter your College Id" tabindex=0 onkeyup="keyEntered()" maxlength="3" required="true" />
 								</div>
 							</div>
 							<span id="s_id"></span>
@@ -56,19 +56,19 @@
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password" disabled="true" />
+									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Access Code" disabled="true" maxlength="5" onkeyup="access_check()" />
 								</div>
 							</div>
+							<span id="access_c"></span>
 						</div>
 
 						<div class="form-group ">
-							<button type="button" class="btn btn-primary btn-lg btn-block login-button" id="reg_button" disabled="true" onclick="window.open('tab_snippet.html')">Continue To Register</button>
+							<button type="submit" onclick="" class="btn btn-primary btn-lg btn-block login-button" id="reg_button" disabled="true")">Continue To Register</button>
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
-
 		<script type="text/javascript" src="assets/js/bootstrap.js"></script>
 	</body>
 </html>
